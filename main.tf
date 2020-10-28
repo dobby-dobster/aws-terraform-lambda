@@ -24,7 +24,7 @@ resource "aws_lambda_function" "hello_world_lambda" {
   role          = aws_iam_role.iam_for_lambda.arn
   handler       = "hello-world.lambda_handler"
 
-  source_code_hash = filebase64sha256("../lambda_function_payload.zip")
+  source_code_hash = filebase64sha256("lambda_function_payload.zip")
 
   runtime = "python3.8"
 
